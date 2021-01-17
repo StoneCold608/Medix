@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <link href="bootstrap.css" rel="stylesheet" type="text/css">
+  
+   
+    <script src="jquery-1.12.0.js"></script>
+   
+     <style>
+           
+           
+         
+
+        .container-administrator
+        {
+          	background-color:red;
+          	  background-image: url('medicine.jpeg');
+           background-repeat: no-repeat;
+        }
+
+	ul
+		{
+		  list-style-type: none;
+		  display: inline;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: blue;
+		}
+
+	li
+		{
+		  float: left;
+		}
+
+	li a
+		{
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 16px;
+		  text-decoration: none;
+		}
+
+
+	li a:hover
+		{
+		  background-color: #111111;
+		}
+
+	.container-employee
+		{
+			background-color:blue;
+		}
+
+
+    </style>
+
+
+
+    <div class="container-logo-medix">
+     
+         <h1>Medix</h1>
+        
+         </image>
+    
+    </div>
+		
+
+    <div class = "container-addshop">
+	
+     </div>
+    
+     <label>Integumentary</label>
+    
+         <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                                                         
+         	<option>Dicloxacilin</option>
+                <option>Erythromycin</option>
+                <option>Tetracycline</option>
+                <option>Fluconazole</option>
+                <option> Itraconazole</option>
+                
+                           
+
+         </select>
+                <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                  <option>Syrup</option>
+                  <option>Capsule</option>
+                                
+
+        </select>
+        
+           <select  style="max-width:20%;" class="form-control drop" id="topping-selector" required>
+                                
+                                <option>Pickup Station:No Charge</option>
+                                <option class="home-delivery" value="100">Home Delivery:Ksh100</option>
+</select>                              
+
+                           
+                              
+                                   <div class="quantity" id="numberInput">
+                 <input  style="max-width:20%;"type="number" class="form-control" placeholder=" 1" id="medicine-quantity" min="1" required>
+         </div>
+                              
+  
+                             
+
+    <label>Cellular</label>
+    
+         <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                                                         
+         	<option>Abacavir</option>
+                <option>Abacavir </option>
+              
+                <option>Acyclovir</option>
+                <option> Alemtuzumab</option>
+                <option> Alendronate</option>
+                <option>Allopurinol</option>
+                <option>Amifostine</option>
+                <option> Amikacin</option>
+                <option>Aminocaproic Acid</option>
+                <option>Panadol</option>
+                <option>Strepsils</option>
+                <option>Brufen</option>
+                           
+
+         </select>
+                <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                  <option>Syrup</option>
+                  <option>Capsule</option>
+                                
+
+        </select>
+
+
+                          
+
+        </select>
+
+                <select style="max-width:20%;"class="form-control drop" id="topping-selector" required>
+                
+                 <option>Pickup Station:No Charge</option>
+                                <option>Home Delivery:Ksh100</option>
+               
+                              
+             <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
+                              
+                              
+
+
+         </div>
+                 <div class="form-group" id="numberInput">
+                 <input  style="max-width:20%;"type="number" class="form-control" placeholder=" 1" id="medicine-quantity" min="1" required>
+         </div>
+                            
+                 <input  style="max-width:20%;"type="text" class="form-control" id="new-first-name">
+
+                          
+          
+        </div>
+                 <div class="form-group">
+             
+            </div>
+
+	    
+
+            
+          </form>
+
+         
+          <ul id="medicine">          
+          </ul>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+                        </div>
+                      </div>
+                      </form>
+
+                  
+		   
+                   
+                
+	   
+         </div>
+	 </div>
+	 
+	    <label>Respiratory System</label>
+                             <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                             
+                             
+    <option>Abacavir</option>
+      <option>Abacavir / dolutegravir / lamivudine (Triumeq®)</option>
+     <option> Abacavir / lamivudine (Epzicom®)</option>
+      <option>Acyclovir</option>
+     <option> Alemtuzumab</option>
+     <option> Alendronate</option>
+      <option>Allopurinol</option>
+      <option>Amifostine</option>
+     <option> Amikacin</option>
+      <option>Aminocaproic Acid</option>
+   
+                                <option>Panadol</option>
+                                <option>Strepsils</option>
+                                <option>Brufen</option>
+                           
+
+                              </select>
+                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                                <option>Syrup</option>
+                                <option>Capsule</option>
+                                
+
+                              </select>
+
+
+                          
+
+                              </select>
+
+                              <select style="max-width:20%;" class="form-control drop" id="topping-selector" required>
+                                <option>Pickup Station:No Charge</option>
+                                <option>Home Delivery:Ksh100</option>
+                              
+
+                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
+                              
+                              
+
+
+                            </div>
+                             <div class="form-group" id="numberInput">
+                                <input style="max-width:20%;"type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
+                              </div>
+
+                             
+              
+            </div>
+            <div class="form-group">
+            
+            </div>
+
+	    
+
+            
+          </form>
+
+         
+          <ul id="medicine">          
+          </ul>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+                        </div>
+                      </div>
+                      </form>
+
+                  
+		   
+                   
+                
+	   
+         </div>
+	 </div>
+
+   <label>Neural System</label>
+                             <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                             
+                             
+    <option>Abacavir</option>
+      <option>Abacavir / dolutegravir / lamivudine (Triumeq®)</option>
+     <option> Abacavir / lamivudine (Epzicom®)</option>
+      <option>Acyclovir</option>
+     <option> Alemtuzumab</option>
+     <option> Alendronate</option>
+      <option>Allopurinol</option>
+      <option>Amifostine</option>
+     <option> Amikacin</option>
+      <option>Aminocaproic Acid</option>
+   
+                                <option>Panadol</option>
+                                <option>Strepsils</option>
+                                <option>Brufen</option>
+                           
+
+                              </select>
+                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                                <option>Syrup</option>
+                                <option>Capsule</option>
+                                
+
+                              </select>
+
+
+                          
+
+                              </select>
+
+                              <select  style="max-width:20%;" class="form-control drop" id="topping-selector" required>
+                                <option>Pickup Station:No Charge</option>
+                                <option>Home Delivery:Ksh100</option>
+                              
+
+                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
+                              
+                              
+
+
+                            </div>
+                             <div class="form-group" id="numberInput">
+                                <input style="max-width:20%;" type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
+                              </div>
+
+                            
+            
+            </div>
+            <div class="form-group">
+            
+            </div>
+
+	    
+
+            
+          </form>
+
+         
+          <ul id="medicine">          
+          </ul>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+                        </div>
+                      </div>
+                      </form>
+
+                  
+		   
+                   
+                
+	   
+         </div>
+	 </div>
+
+   <label>Cardiac System</label>
+                             <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                             
+                             
+    <option>Abacavir</option>
+      <option>Abacavir / dolutegravir / lamivudine (Triumeq®)</option>
+     <option> Abacavir / lamivudine (Epzicom®)</option>
+      <option>Acyclovir</option>
+     <option> Alemtuzumab</option>
+     <option> Alendronate</option>
+      <option>Allopurinol</option>
+      <option>Amifostine</option>
+     <option> Amikacin</option>
+      <option>Aminocaproic Acid</option>
+   
+                                <option>Panadol</option>
+                                <option>Strepsils</option>
+                                <option>Brufen</option>
+                           
+
+                              </select>
+                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                                <option>Syrup</option>
+                                <option>Capsule</option>
+                                
+
+                              </select>
+
+
+                          
+
+                              </select>
+
+                              <select style="max-width:20%;" class="form-control drop" id="topping-selector" required>
+                                 <option>Pickup Station:No Charge</option>
+                                <option>Home Delivery:Ksh100</option>
+                              
+
+                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
+                              
+                              
+
+
+                            </div>
+                             <div class="form-group" id="numberInput">
+                                <input style="max-width:20%;" type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
+                              </div>
+
+                           
+            
+            </div>
+            <div class="form-group">
+            
+            </div>
+
+	    
+
+            
+          </form>
+
+         
+          <ul id="medicine">          
+          </ul>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+                        </div>
+                      </div>
+                      </form>
+
+                  
+		   
+                   
+                
+	   
+         </div>
+	 </div>
+
+   <label>Lymphic System</label>
+                             <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                             
+                             
+    <option>Abacavir</option>
+      <option>Abacavir / dolutegravir / lamivudine (Triumeq®)</option>
+     <option> Abacavir / lamivudine (Epzicom®)</option>
+      <option>Acyclovir</option>
+     <option> Alemtuzumab</option>
+     <option> Alendronate</option>
+      <option>Allopurinol</option>
+      <option>Amifostine</option>
+     <option> Amikacin</option>
+      <option>Aminocaproic Acid</option>
+   
+                                <option>Panadol</option>
+                                <option>Strepsils</option>
+                                <option>Brufen</option>
+                           
+
+                              </select>
+                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+                                <option>Syrup</option>
+                                <option>Capsule</option>
+                                
+
+                              </select>
+
+
+                          
+
+                              </select>
+
+                              <select style="max-width:20%;" class="form-control drop" id="topping-selector" required>
+                                 <option>Pickup Station:No Charge</option>
+                                <option>Home Delivery:Ksh100</option>
+                              
+
+                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
+                              
+                              
+
+
+                            </div>
+                             <div class="form-group" id="numberInput">
+                                <input style="max-width:20%;" type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
+                              </div>
+
+                         
+              
+            </div>
+            <div class="form-group">
+            
+            </div>
+
+	    
+
+            
+          </form>
+
+         
+          <ul id="medicine">          
+          </ul>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+                        </div>
+                      </div>
+                      </form>
+
+                  
+		   
+                   
+                
+	   
+         </div>
+	 </div>
+
+
+	 <script type="text/javascript">
+	 // business logic
+// business logic
+
+function Medicine(first)
+{
+  this.firstName = first;
+  
+  Medicine.prototype.fullName= function()
+	{
+		return this.firstName;
+	}
+
+}
+
+Medicine.prototype.fullName= function()
+{
+	return this.firstName;
+}
+
+// user interface logic
+$(document).ready(function()
+	{
+		$("form#new-contact").submit(function(event)
+			{
+				event.preventDefault();
+				var inputtedFirstName = $("input#new-first-name").val();
+				
+				var newMed = new Medicine(inputtedFirstName);
+				$("ul#medicine").append("<li><span class='contact'>" + newMed.firstName + "</span></li>");
+				
+				$(".contact").last().click(function()
+					{
+						$("#show-contact").show();     
+						$("#show-contact h2").text(newMed.firstName);
+                                              $(".first-name").text(newMed.firstName);
+                                    	     
+					});
+
+				$("input#new-first-name").val("");
+				
+
+				});
+		}); 
+		
+
+	
+	
+	
+var add = function(number1, number2) 
+{
+return number1 + number2;
+};
+var subtract = function(number1, number2)
+{
+return number1 - number2;
+};
+var multiply = function(number1, number2)
+{
+return number1 * number2;
+};
+var divide = function(number1, number2)
+{
+return number1 / number2;
+};
+
+$(document).ready(function()
+ {
+$("form#add").submit(function(event)
+ {
+event.preventDefault();
+var number1 = parseInt($("#add1").val());
+var number2 = parseInt($("#add2").val());
+var result = add(number1, number2);
+$("#output").text(result);
+});
+});
+		
+   
+	</script>
+
+		
+	
+	
+		<style>
+
+#business-management-system
+{
+        font-size: 40px;
+	font-family: 'Calibri';
+	font-color: black;
+}
+.round-button
+{
+	
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+ul
+{
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+
+  background-color: #f1f1f1;
+}
+
+li a
+{
+  display: block;
+  color: #000;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover
+{
+  background-color: #555;
+  color: white;
+}
+
+#show-contact
+{
+  display: none;
+}
+
+.contact
+{
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.contact:hover
+{
+  text-decoration: underline;
+}  
+body
+ {
+  background-image: url('bms-background.jpg');
+}
+
+.title
+{
+color:black;
+background-color: #white;
+}
+        body
+         {
+           background-image: url('medix-background.png');
+          
+         }
+   </style>
+
+  
+    <title></title>
+  </head>
+  <body>
+  
+  
+</style> 
+ 
+    <div class="container">
+    
+      <!--
+      image src="logo.png" width="100px" height ="100px">
+      -->
+     
+      <image src=>
+       <div class="row">
+        <div class="col-md-6">
+        
+          <form id="new-contact">
+            <div class="form-group">
+            
+            
+           
+            </div>
+         
+
+	    
+
+            <button type="submit" class="btn">Add Cart</button>
+          </form>
+
+        
+          <ul id="shops">          
+          </ul>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<style>
+
+    th{ 
+        color:black;
+      }
+</style>
+
+<select id="type">
+    <option value="item1">Syrup</option>
+    <option value="item2">Capsule</option>
+  
+</select>
+
+<select id="size">
+    <option value="">-- select one -- </option>
+</select>
+
+
+
+<script>
+ // business logic
+// business logic
+
+function Shop(first)
+{
+  this.firstName = first;
+  
+  Shop.prototype.fullName= function()
+	{
+		return this.firstName;
+	}
+
+}
+
+Shop.prototype.fullName= function()
+{
+	return this.firstName;
+}
+
+// user interface logic
+$(document).ready(function()
+	{
+		$("form#new-contact").submit(function(event)
+			{
+				event.preventDefault();
+				var inputtedFirstName = $("input#new-first-name").val();
+				
+				var newShop = new Shop(inputtedFirstName);
+				$("ul#shops").append("<li><span class='contact'>" + newShop.firstName + "</span></li>");
+				
+				$(".contact").last().click(function()
+					{
+						$("#show-contact").show();     
+						$("#show-contact h2").text(newShop.firstName);
+                                              $(".first-name").text(newShop.firstName);
+                                    	     
+					});
+
+				$("input#new-first-name").val("");
+				
+
+				});
+		}); 
+		
+
+	
+	
+var add = function(number1, number2) 
+{
+return number1 + number2;
+};
+var subtract = function(number1, number2)
+{
+return number1 - number2;
+};
+var multiply = function(number1, number2)
+{
+return number1 * number2;
+};
+var divide = function(number1, number2)
+{
+return number1 / number2;
+};
+
+$(document).ready(function()
+ {
+$("form#sub").submit(function(event)
+ {
+event.preventDefault();
+var number1 = parseInt($("#sub1").val());
+var number2 = parseInt($("#sub2").val());
+var result = subtract(number2, number1);
+$("#output").text(result);
+$("#myTable").append('<tr><th>' + result + '</th><td>' + myArray[i][n] +  '</td></tr>');
+});
+});
+
+
+
+
+
+</script>
+
+
+
+
+.
+          
+          
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+    $(document).ready(function()
+ {
+
+    $("#type").change(function()
+     {
+        var val = $(this).val();
+        if (val == "item1")
+         {
+         
+            $("#size").html("<option value='test'>Pickup Station: No Charge</option><option value='test2'>Home Delivery: Ksh.100</option>");
+            
+         } 
+         else if (val == "item2") 
+         {
+            $("#size").html("<option value='test'>Pickup Station: No Charge</option><option value='test2'>Home Delivery: Ksh.100</option>");
+
+        } 
+        else if (val == "item3") 
+        {
+            $("#size").html("<option value='test'>item3: test 1</option><option value='test2'>item3: test 2</option>");
+
+        }
+    });
+    });
+    </script>
+    
+  </body>
+</html>   

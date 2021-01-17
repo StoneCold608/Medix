@@ -1,0 +1,53 @@
+.container-administrator
+{
+	background-color:red;
+}
+
+.container-employee
+{
+	background-color:blue;
+}
+
+#business-management-system
+{
+        font-size: 40px;
+	font-family: 'Calibri';
+}
+.round-button
+{
+	
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+
+  background-color: #f1f1f1;
+}
+
+li a
+{
+  display: block;
+  color: #000;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover
+{
+  background-color: #555;
+  color: white;
+}
