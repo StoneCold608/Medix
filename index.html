@@ -57,6 +57,7 @@
          </div>
                               
   
+  <p id="result"></p>
                              
 
     <label>Cellular</label>
@@ -446,14 +447,20 @@
 	 <script type="text/javascript">
 	 // business logic
 // business logic
-var medicine = $('#med').val();
-alert('value is ' + ( 10 + medicine )); 
-// it give result as 10x instead of 1x 
+		 var optionValues = [];
 
-$('#lesson_per_class option:selected').index()
+$('#med').each(function() {
+    optionValues.push($(this).val());
+});
+
+$('#result').html(optionValues);
+
+
+
 
 		 
-class Medicine {
+class Medicine 
+{
   constructor(type, size, crust, toppings, quantity, delivery){
   this.type = type;
   this.size = size;
@@ -464,8 +471,10 @@ class Medicine {
   this.basePrice = 600;
   }
 
-  typePrice(){
-    if (this.type == "CHICKEN SUPREME"){
+  typePrice()
+	{
+		if (this.type == "CHICKEN SUPREME")
+		{
       this.price = 700;
       return this.price;
     } else {
@@ -820,10 +829,7 @@ $(document).ready(function()
 
 				});
 		}); 
-		
 
-	
-	
 var add = function(number1, number2) 
 {
 return number1 + number2;
