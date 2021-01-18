@@ -40,7 +40,7 @@
     
          <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
                                                          
-         	<option>Dicloxacilin</option>
+         	<option value=2800 >Dicloxacilin</option>
                 <option>Erythromycin</option>
                 <option>Tetracycline</option>
                 <option>Fluconazole</option>
@@ -50,8 +50,8 @@
 
          </select>
                 <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                  <option id="item1">Syrup</option>
-                  <option id="item2">Capsule</option>
+                  <option>Syrup</option>
+                  <option>Capsule</option>
                                 
 
         </select>
@@ -460,46 +460,116 @@
 	 // business logic
 // business logic
 
-function Medicine(first)
-{
-  this.firstName = first;
-  
-  Medicine.prototype.fullName= function()
-	{
-		return this.firstName;
-	}
+
+		 
+class Medicine {
+  constructor(type, size, crust, toppings, quantity, delivery){
+  this.type = type;
+  this.size = size;
+  this.crust = crust;
+  this.toppings = toppings;
+  this.quantity = quantity;
+  this.delivery = delivery;
+  this.basePrice = 600;
+  }
+
+  typePrice(){
+    if (this.type == "CHICKEN SUPREME"){
+      this.price = 700;
+      return this.price;
+    } else {
+      return this.price;
+    }
+  }
+
+  priceBySize(){
+    if (this.size == "Large"){
+      return 1500;
+    } else if (this.size == "Medium"){
+      return 1000;
+    } else {
+      return 500;
+    }
+  }
+
+  crustPrice(){
+    if (this.crust == "Tripple Cheese Crust"){
+      return 400;
+    } else if (this.crust == "Double Cheese Crust"){
+      return 300;
+    } else if (this.crust == "Puff Pastry"){
+      return 200;
+    } else if (this.crust == "Cheesy Crust"){
+      return 150;
+    } else {
+      return 0;
+    }
+  }
+
+  toppingsPrice(){
+    if (this.toppings == "Extra Chicken"){
+      return 200;
+    } else {
+      return 0;
+    }
+  }
+
+  deliveryPrice(){
+    if (this.delivery == true){
+      return 200;
+    } else {
+      return 0;
+    }
+  }
+
+  totalPriceNoDelivery(){
+    let priceAtPointA = this.typePrice();
+    let priceAtPointB = this.priceBySize();
+    let priceAtPointC = this.toppingsPrice();
+    let priceAtPointD = this.crustPrice();
+
+    return priceAtPointA + priceAtPointB + priceAtPointC + priceAtPointD;
+  }
+
+  pricePerQuantity(){
+    let grossPrice = this.totalPriceNoDelivery();
+    return grossPrice * this.quantity;
+  }
+
+  totalPlusDelivery(){
+    let withoutDelivery = this.pricePerQuantity();
+    let deliveryFee = this.deliveryPrice();
+
+    return withoutDelivery + deliveryFee;
+  }
 
 }
 
-Medicine.prototype.fullName= function()
-{
-	return this.firstName;
-}
 
-// user interface logic
-$(document).ready(function()
-	{
-		$("form#new-contact").submit(function(event)
-			{
-				event.preventDefault();
-				var inputtedFirstName = $("input#new-first-name").val();
-				
-				var newMed = new Medicine(inputtedFirstName);
-				$("ul#medicine").append("<li><span class='contact'>" + newMed.firstName + "</span></li>");
-				
-				$(".contact").last().click(function()
-					{
-						$("#show-contact").show();     
-						$("#show-contact h2").text(newMed.firstName);
-                                              $(".first-name").text(newMed.firstName);
-                                    	     
-					});
+$(document).ready(()=>{
+  $("#pizza-one-form").submit((event)=>{
+    event.preventDefault();
+    let pizzaName = $("#pizza-one-label").text();
+    let pizzaSize = $("#size-selector").val();
+    let toppingType = $("#topping-selector").val();
+    let crustType = $("#crust-selector").val();
+    let pizzaQuantity = Number($("#pizza-quantity").val());
+    // let delivery = $("#to-be-delivered").is(":checked");
+    // let pickUp = $("#to-be-picked").is(":checked");
+  let chickenSupreme = new Pizza(pizzaName, pizzaSize, crustType, toppingType, pizzaQuantity, false);
+  $("#size-price").text(chickenSupreme.size + " " + chickenSupreme.type + ": " + "Ksh. " + chickenSupreme.priceBySize());
+  $("#crust-price").text(chickenSupreme.crust + ": " +  "Ksh. " + chickenSupreme.crustPrice());
+  $("#toppings-price").text(chickenSupreme.toppings + " Toppings" + ": " + "Ksh. " + chickenSupreme.toppingsPrice());
+  $("#delivery-price").text("Delivery: " + chickenSupreme.deliveryPrice());
+  $("#total").text("Total: " + "Ksh. " + chickenSupreme.totalPlusDelivery());
+  });
+});
 
-				$("input#new-first-name").val("");
-				
-
-				});
-		}); 
+$(document).ready(function(){
+  $("#checkOut").onclick(function(event){
+      alert (name + ", We have received your message. Thank you for reaching out to us.");
+  });    
+});
 		
 
 	
@@ -533,6 +603,10 @@ var result = add(number1, number2);
 $("#output").text(result);
 });
 });
+
+var a = document.getElementById("");
+var ausgangss = a.options[a.selectedIndex].value;
+
 		
    
 	</script>
