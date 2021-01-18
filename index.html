@@ -71,9 +71,9 @@
   </select>
   
 </div>
-​
+
 </form>
-​
+
 <form id="pricing">
   <option value="one"></option>
   <div class="form-group">
@@ -142,8 +142,8 @@
 
 <script>
 var OrderNew = [];
-function Med(pizzaFlavour,pizzaSize,pizzaCrust,pizzaTopping, PizzaNumber) {
-    this.pizzaFlavour=pizzaFlavour;
+function Med(medName,pizzaSize,pizzaCrust,pizzaTopping, PizzaNumber) {
+    this.medName=medName;
     this.pizzaSize= pizzaSize;
     this.pizzaCrust=pizzaCrust;
     this.pizzaTopping=pizzaTopping;
@@ -203,7 +203,7 @@ $("#checkout").click(function (event) {
     
     console.log(newPizzae)
     
-    console.log(newPizzae.pizzaFlavour)
+    console.log(newPizzae.medName)
     OrderNew.push(newPizzae);
     console.log(OrderNew)
     
@@ -222,7 +222,7 @@ $("#checkout").click(function (event) {
     $("#ordersTaken").append(
         "<tr>" +
         '<td scope="orderCalculation">' +
-       newPizzae.pizzaFlavour +
+       newPizzae.medName +
         "</td>" +
         "<td>" +
         newPizzae.pizzaS () +
