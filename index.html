@@ -450,7 +450,7 @@
 			 var htmlString = "";
 			 for (i=0;i<data.length;i++)
 			 {
-				 htmlString+=<p>+ data[i].name +"."</p>
+				 htmlString+="<p>"+ data[i].name +"."+"</p>"
 			 }
 			 result.insertAdjacentHTML("before-end",htmlString);
 		 }
