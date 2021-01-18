@@ -427,7 +427,7 @@
         //dicloxacilin.name
 	var result = document.getElementById("result-integumentary")
 	
-	var addcartbtn  = document.getElementById("add-cart")
+        var addcartbtn  = document.getElementById("add-cart")
         addcartbtn.addEventListener("click",function(){ var med = [{name:dicloxacilin
 			         price:2800
 			         type: capsule
@@ -650,127 +650,20 @@ body
           </ul>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	       </div>
-	       <style>
-  
-</style>
-
-<script>
- // business logic
-// business logic
-
-function Shop(first)
-{
-  this.firstName = first;
-  
-  Shop.prototype.fullName= function()
-	{
-		return this.firstName;
-	}
-
-}
-
-Shop.prototype.fullName= function()
-{
-	return this.firstName;
-}
-
-// user interface logic
-$(document).ready(function()
-	{
-		$("form#new-contact").submit(function(event)
-			{
-				event.preventDefault();
-				var inputtedFirstName = $("input#new-first-name").val();
-				
-				var newShop = new Shop(inputtedFirstName);
-				$("ul#shops").append("<li><span class='contact'>" + newShop.firstName + "</span></li>");
-				
-				$(".contact").last().click(function()
-					{
-						$("#show-contact").show();     
-						$("#show-contact h2").text(newShop.firstName);
-                                              $(".first-name").text(newShop.firstName);
-                                    	     
-					});
-
-				$("input#new-first-name").val("");
-				
-
-				});
-		}); 
-
-var add = function(number1, number2) 
-{
-return number1 + number2;
-};
-var subtract = function(number1, number2)
-{
-return number1 - number2;
-};
-var multiply = function(number1, number2)
-{
-return number1 * number2;
-};
-var divide = function(number1, number2)
-{
-return number1 / number2;
-};
-
-$(document).ready(function()
- {
-$("form#sub").submit(function(event)
- {
-event.preventDefault();
-var number1 = parseInt($("#sub1").val());
-var number2 = parseInt($("#sub2").val());
-var result = subtract(number2, number1);
-$("#output").text(result);
-$("#myTable").append('<tr><th>' + result + '</th><td>' + myArray[i][n] +  '</td></tr>');
-});
-});
+	     
 
 
 
 
 
-</script>
 
-
-
-
-.
           
           
         </div>
       </div>
     </div>
     </div>
-    <script>
-    $(document).ready(function()
- {
-
-    $("#type").change(function()
-     {
-        var val = $(this).val();
-        if (val == "item1")
-         {
-         
-            $("#size").html("<option value='test'>Pickup Station: No Charge</option><option value='test2'>Home Delivery: Ksh.100</option>");
-            
-         } 
-         else if (val == "item2") 
-         {
-            $("#size").html("<option value='test'>Pickup Station: No Charge</option><option value='test2'>Home Delivery: Ksh.100</option>");
-
-        } 
-        else if (val == "item3") 
-        {
-            $("#size").html("<option value='test'>item3: test 1</option><option value='test2'>item3: test 2</option>");
-
-        }
-    });
-    });
-    </script>
+   
     
   </body>
 </html>   
