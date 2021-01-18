@@ -447,19 +447,21 @@
 
 	 <script type="text/javascript">
 	 // business logic
-// business logic
-		 var optionValues = [];
-		 
-		 $('#med-selector option').each(function() 
-				       {
-			     optionValues.push($(this).val());
-});
-
-$('#result').html(optionValues);
+         // business logic
 	
-
-                 $( ".med-selector" ).val();
-		
+	var optionValues = [];
+        var sum = 0;
+	 
+	$('#med-selector option').each(function()
+	{
+		sum += Number($(this).val());		
+		optionValues.push($(this).val());
+	});
+	
+		$('#result').html(optionValues);
+		$( ".med-selector" ).val();
+	
+ 
 
 
 
