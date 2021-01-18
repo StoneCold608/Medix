@@ -426,8 +426,9 @@
 		 
         //dicloxacilin.name
 	var result = document.getElementById("result-integumentary")
-	//JSON(Javascript Object Notaion)
-	        var med = [{name:dicloxacilin
+	
+	var add-cart-btn  = document.getElementById("add-cart")
+        add-cart-btn.addEventListener("click",function(){ var med = [{name:dicloxacilin
 			         price:2800
 			         type: capsule
 			    	 delivery:home
@@ -439,7 +440,10 @@
 				   delivery:home
 			   }]
 		 
-		 render-output(med);
+		 render-output(med);});
+		 
+	//JSON(Javascript Object Notaion)
+	       
 		 
 		 function render-output(data)
 		 {
@@ -640,7 +644,7 @@ body
           <form id="new-contact">
             <div class="form-group">            
            </div>
-          <button type="submit" class="btn">Add Cart</button>
+          <button type="submit" class="btn" id="add-cart">Add Cart</button>
           </form>
         <ul id="shops">          
           </ul>
