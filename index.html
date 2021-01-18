@@ -142,7 +142,7 @@
 
 <script>
 var OrderNew = [];
-function Pizza(pizzaFlavour,pizzaSize,pizzaCrust,pizzaTopping, PizzaNumber) {
+function Med(pizzaFlavour,pizzaSize,pizzaCrust,pizzaTopping, PizzaNumber) {
     this.pizzaFlavour=pizzaFlavour;
     this.pizzaSize= pizzaSize;
     this.pizzaCrust=pizzaCrust;
@@ -150,10 +150,10 @@ function Pizza(pizzaFlavour,pizzaSize,pizzaCrust,pizzaTopping, PizzaNumber) {
     this.PizzaNumber=PizzaNumber;
 }
 var pizzaPrice= [900,600,400,]
-Pizza.prototype.totalPrice = function(){
+Med.prototype.totalPrice = function(){
     return (this.pizzaCrust + this.pizzaTopping + this.pizzaSize) * this.PizzaNumber
 };
-Pizza.prototype.pizzaS = function () {
+Med.prototype.pizzaS = function () {
     if (this.pizzaSize == 900) {
         return "Panadol"
         
@@ -163,7 +163,7 @@ Pizza.prototype.pizzaS = function () {
         return "Brufen"
     }
 }
-Pizza.prototype.pizzaC = function () {
+Med.prototype.pizzaC = function () {
     if (this.pizzaCrust == 150) {
         return "Syrup"
         
@@ -173,7 +173,7 @@ Pizza.prototype.pizzaC = function () {
         return "Injection"
     }
 }
-Pizza.prototype.pizzaT =function(){
+Med.prototype.pizzaT =function(){
     if (this.pizzaTopping == 150){
         return "Main Branch Pickup"
     }
@@ -198,7 +198,7 @@ $("#checkout").click(function (event) {
     var PizzaNumber =parseInt( $("#number").val());
     
     
-    var newPizzae = new Pizza(PizzaFlavour, PizzaSize, PizzaCrust, PizzaTopping, PizzaNumber); 
+    var newPizzae = new Med(PizzaFlavour, PizzaSize, PizzaCrust, PizzaTopping, PizzaNumber); 
     
     
     console.log(newPizzae)
