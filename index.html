@@ -462,12 +462,13 @@
 	
 	$('#dicloxacilin'(function()
 	{
-		multiply *= Number($(this).val());
+		multiply = Number($(this).val())*$('#med-selector option');
 		optionValues.push($(this).val());
 	});
 	
 		$('#result').html(sum);
 		$( ".med-selector" ).val();
+		 
 	$('#med-selector option').each(function()
 	{
 		
