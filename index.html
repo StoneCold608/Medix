@@ -449,12 +449,11 @@
 // business logic
 		 
 		 var optionValues = [];
-
-$('#med').each(function() {
-    optionValues.push($(this).val());
-});
-
-$('#result').html(optionValues);
+		 $('#med option').each(function() 
+				{
+			     optionValues.push($(this).val());
+			 });
+		 $('#result').html(optionValues);
 
 
 
