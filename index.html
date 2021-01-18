@@ -1,659 +1,307 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-  
-    <link href="bootstrap.css" rel="stylesheet" type="text/css">
-	  <script src="jquery-1.12.0.js"></script>
-	  <script src="js/scripts.js"></script>
-	 
-<div class="container-administrator">
-    <div class="container-logo-medix">
-     
-         <h1>Medix</h1>
-                
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     
-    </div>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+   
+    <title>Medix</title>
 </head>
-
-	  <body>
-
-    <div class = "container-addshop">
-	
-     
-    
-     <label>Integumentary</label>
-    
-         <select style="max-width:20%;" class="form-control drop" id="med-selector" required>
-                                                         
-         	<option value=2800 id="dicloxacilin">Dicloxacilin :  Ksh.2800</option>
-                <option value=2368 id="erthromycin">Erythromycin  :  Ksh.2368</option>
-                <option value=279  id="tetracycline">Tetracycline :  Ksh279</option>
-                <option value=890  id="fluconazole">Fluconazole   :  Ksh.890</option>
-                <option value=8900 id="itraconazole">Itraconazole :  Ksh.8900 </option>
-                
-                           
-
-         </select>
-	     <div id="result-integumentary"></div>
-	      
-                <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                  <option id="integumentary-syrup">Syrup</option>
-                  <option id="integumentary-capsule">Capsule</option>
-                                
-
-        </select>
+<body>
+           <nav class="navbar navbar-expand-lg navbar-light">
         
-           <select  style="max-width:20%;" class="form-control drop" id="topping-selector" required>
-                                
-                                <option class="pickup-station" id ="integumentary-pick-up">Pickup Station:No Charge</option>
-                                <option class="home-delivery"  id="integumentary-home-delivery"value="100">Home Delivery:Ksh100</option>
-          </select>                              
-
-                           
-                              
-                                   <div class="quantity" value=3 id="integumentary-quantity">
-                 <input  style="max-width:20%;"type="number" class="form-control" placeholder=" 1" id="medicine-quantity" min="1" required>
-         </div>
-                              
-  
- 
-                             
-
-    <label>Cellular</label>
-    
-         <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                                                         
-         	<option>Leucovorin</option>
-                <option>Ferrous Sulfate</option>
-                <option>Procrit</option>
-                <option>Ferralet </option>
-             
-
-         </select>
-                <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                  <option>Syrup</option>
-                  <option>Capsule</option>
-                                
-
-        </select>
-
-
-                          
-
-        </select>
-
-                <select style="max-width:20%;"class="form-control drop" id="topping-selector" required>
-                
-                 <option>Pickup Station:No Charge</option>
-                                <option>Home Delivery:Ksh100</option>
-               
-                              
-             <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
-                              
-                              
-
-
-         </div>
-                 <div class="form-group" id="numberInput">
-                 <input  style="max-width:20%;"type="number" class="form-control" placeholder=" 1" id="medicine-quantity" min="1" required>
-         </div>
-                            
-                 <input  style="max-width:20%;"type="text" class="form-control" id="new-first-name">
-
-                          
-          
-        </div>
-                 <div class="form-group">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <h1 style="color:lightblue;">Medix</h1> 
              
             </div>
-
-	    
-
-            
-          </form>
-
-         
-          <ul id="medicine">          
-          </ul>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-                        </div>
-                      </div>
-                      </form>
-
-                  
-		   
-                   
-                
-	   
-         </div>
-	 </div>
-	
-	    <label>Respiratory System</label>
-                             <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-				                                 
-                             <option>Broncholidators</option>
-		             <option>Corticosteroids</option>
-			     <option> Antihistamine</option>
-		             <option>Ribavirin</option>
-		             <option>Beractant</option>
-				                                
-
-                              </select>
-                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                                <option>Syrup</option>
-                                <option>Capsule</option>
-                                
-
-                              </select>
-
-
-                          
-
-                              </select>
-
-                              <select style="max-width:20%;" class="form-control drop" id="topping-selector" required>
-                                <option>Pickup Station:No Charge</option>
-                                <option>Home Delivery:Ksh100</option>
-                              
-
-                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
-                              
-                              
-
-
-                            </div>
-                             <div class="form-group" id="numberInput">
-                                <input style="max-width:20%;"type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
-                              </div>
-
-                             
-              
-            </div>
-            <div class="form-group">
-            
-            </div>
-
-	    
-
-            
-          </form>
-
-         
-          <ul id="medicine">          
-          </ul>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-                        </div>
-                      </div>
-                      </form>
-
-                  
-		   
-                   
-                
-	   
-         </div>
-	 </div>
-
-   <label>Neural System</label>
-                             <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-				                                 
-                             
-        
-                                <option>Zalasta</option>
-                                <option>Parlodel</option>
-                                <option>Amitriptyline</option>
-                                <option>Duloxetine</option>
-                           
-
-                              </select>
-                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                                <option>Syrup</option>
-                                <option>Capsule</option>
-                                
-
-                              </select>
-
-
-                          
-
-                              </select>
-
-                              <select  style="max-width:20%;" class="form-control drop" id="topping-selector" required>
-                                <option>Pickup Station:No Charge</option>
-                                <option>Home Delivery:Ksh100</option>
-                              
-
-                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
-                              
-                              
-
-
-                            </div>
-                             <div class="form-group" id="numberInput">
-                                <input style="max-width:20%;" type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
-                              </div>
-
-                            
-            
-            </div>
-            <div class="form-group">
-            
-            </div>
-
-	    
-
-            
-          </form>
-
-         
-          <ul id="medicine">          
-          </ul>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-                        </div>
-                      </div>
-                      </form>
-
-                  
-		   
-                   
-                
-	   
-         </div>
-	 </div>
-
-   <label>Cardiac System</label>
-                             <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                             
-                             
-				     <option>Sectral</option>
-				     <option>Kerlone</option>
-				     <option>Inderal</option>
-				     <option>Propranolol</option>
-    
-   
-                           
-
-                              </select>
-                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                                <option>Syrup</option>
-                                <option>Capsule</option>
-                                
-
-                              </select>
-
-
-                          
-
-                              </select>
-
-                              <select style="max-width:20%;" class="form-control drop" id="topping-selector" required>
-                                 <option>Pickup Station:No Charge</option>
-                                <option>Home Delivery:Ksh100</option>
-                              
-
-                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
-                              
-                              
-
-
-                            </div>
-                             <div class="form-group" id="numberInput">
-                                <input style="max-width:20%;" type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
-                              </div>
-
-                           
-            
-            </div>
-            <div class="form-group">
-            
-            </div>
-
-	    
-
-            
-          </form>
-
-         
-          <ul id="medicine">          
-          </ul>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-                        </div>
-                      </div>
-                      </form>
-
-                  
-		   
-                   
-                
-	   
-         </div>
-	 </div>
-
-   <label>Lymphatic System</label>
-                             <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                             
-                            <option>Raloxifene</option>
-			    <option>Halofantrine</option>
-			    <option>Vinpocetrine</option>
-			    <option>Cefotaxime</option>
-   
-                           
-
-                              </select>
-                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                                <option>Syrup</option>
-                                <option>Capsule</option>
-                                
-
-                              </select>
-
-
-                          
-
-                              </select>
-
-                              <select style="max-width:20%;" class="form-control drop" id="topping-selector" required>
-                                 <option>Pickup Station:No Charge</option>
-                                <option>Home Delivery:Ksh100</option>
-                              
-
-                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
-                              
-                              
-
-
-                            </div>
-                             <div class="form-group" id="numberInput">
-                                <input style="max-width:20%;" type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
-                              </div>
-
-                         
-              
-            </div>
-            <div class="form-group">
-            
-            </div>
-
-	    
-
-            
-          </form>
-
-         
-          <ul id="medicine">          
-          </ul>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-                        </div>
-                      </div>
-                      </form>
-
-                  
-		   
-                   
-                
-	   
-         </div>
-	 </div>
-</div>
-
-
-	 <script type="text/javascript">
-	 // business logic
-         // business logic
-		 
-        //Javascript Object
-		 //var dicloxacilin
-	//{
-	//	name:dicloxacilin
-	//	price:2800
-	//	type: capsule
-	//	delivery:home
-	//}
-		 
-        //dicloxacilin.name
-	var result = document.getElementById("result-integumentary")
-	
-        var addcartbtn  = document.getElementById("add-cart")
-        addcartbtn.addEventListener("click",function()
-	{ 
-		var med = [{name:dicloxacilin price:2800 type: capsule delivery:home},{name:dicloxacilin price:2300 type:syrup delivery:home}]
-		render-output(med)
-	
-	});
-		 
-	//JSON(Javascript Object Notaion)
-	       
-		 
-		 function render-output(data)
-		 {
-			 var htmlString = "";
-			 for (i=0;i<data.length;i++)
-			 {
-				 htmlString+="<p>"+ data[i].name +"."+"</p>"
-			 }
-			 result.insertAdjacentHTML("before-end",htmlString);
-		 }
-	 
-        
-		 
-	$('#med-selector option').each(function()
-	{
-		
-		sum += Number($(this).val());		
-		optionValues.push($(this).val());
-	});
-	
-		$('#result').html(sum);
-		$( ".med-selector" ).val();
-		
-var add = function(number1, number2) 
-{
-return number1 + number2;
-};
-var subtract = function(number1, number2)
-{
-return number1 - number2;
-};
-var multiply = function(number1, number2)
-{
-return number1 * number2;
-};
-var divide = function(number1, number2)
-{
-return number1 / number2;
-};
-
-$(document).ready(function()
- {
-$("form#add").submit(function(event)
- {
-event.preventDefault();
-var number1 = parseInt($("#add1").val());
-var number2 = parseInt($("#add2").val());
-var result = add(number1, number2);
-$("#output").text(result);
-});
-});
-
-var a = document.getElementById("");
-var ausgangss = a.options[a.selectedIndex].value;
-
-		
-   
-</script>
-
-		
-	
-	
-<style>
-
-#business-management-system
-{
-        font-size: 40px;
-	font-family: 'Calibri';
-	font-color: black;
-}
-.round-button
-{
-	
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-}
-
-ul
-{
-  list-style-type: none;
-  margin: 10px;
-  padding: 10px;
-  width: 100px;
-
-  background-color: #f1f1f1;
-}
-
-li a
-{
-  display: block;
-  color: #000;
-  padding: 10px 10px;
-  text-decoration: none;
-}
-
-/* Change the link color on hover */
-li a:hover
-{
-  background-color: #555;
-  color: white;
-}
-
-#show-contact
-{
-  display: none;
-}
-ul
-{
-		  list-style-type: none;
-		  display: inline;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: blue;
-		}
-
-li
-		{
-		  float: left;
-		}
-
-li a
-		{
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 16px;
-		  text-decoration: none;
-		}
-
-
-li a:hover
-		{
-		  background-color: #111111;
-		}
-
-.container-employee
-		{
-			background-color:blue;
-		}
-
-.contact
-{
-  cursor: pointer;
-  color: #0088cc;
-}
-
-.contact:hover
-{
-  text-decoration: underline;
-}  
-body
- {
-  background-image: url('medical.png');
-}
-
-.title
-{
-color:black;
-background-color: #white;
-}
-	th{ 
-        color:black;
-      }
-
-body
-         {
-           background-image: url('medical.png');
-          
-         }
-   </style>
-
-  
-    <title></title>
-  </head>
-  <body>
-  
-  
-</style> 
- 
+          </nav>
+<div class="Table">
     <div class="container">
-    
-      <!--
-      image src="logo.png" width="100px" height ="100px">
-      -->
-     
-      <image src=>
-       <div class="row">
-        <div class="col-md-6">
-        
-          <form id="new-contact">
-            <div class="form-group">            
-           </div>
-          <button type="submit" class="btn" id="add-cart">Add Cart</button>
-          </form>
-        <ul id="shops">          
-          </ul>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	       </div>
-	     
-
-
-
-
-
-
-          
+        <div class="row">
+          <div class="col-md">
+       
           
         </div>
       </div>
-    </div>
-    </div>
-   
+</div>
+<br>
+<div class="container">
+<form action="" id="order">
+    <h2 style="text-align: center;color: white;"><strong> Buy Now</strong></h2>
+<div class="card" style="color: white;">
+    <p>Medicine</p>
+    <select class="form-control form-control-sm" id="Flavour">
+      <br>
+      <option>select</option>
+      <option value="Panadol">Panadol</option>
+      <option value="Strepsils">Strepsils</option>
+      <option value="Brufen">Brufen</option>
+    </select>
+    <p>Medicine Type</p>
+    <select class="form-control form-control-sm" id="Size">
+      <br>
+      <option>select</option>
+      <option value="900">Syrup </option>
+      <option value="600"> Capsule</option>
+      <option value="400">Injection</option>
+    </select>
     
-  </body>
-</html>   
+  <p>Dose</p> 
+  <select class="form-control form-control-sm" id="Crust">
+    <option>select</option>
+    <option value="0">Mild</option>
+    <option value="0">Normal</option>
+    <option value="0">Effective</option>
+  </select>
+  
+<p>Pick Method</p>
+  <select class="form-control form-control-sm" id="Topping">
+    <option>select</option>
+    <option value="0">Main Branch Pickup</option>
+    <option value="5">Sub-Branch Pickup : Ksh.5</option>
+    <option value="10">Home Delivery :Ksh.10</option>
+  </select>
+  
+</div>
+​
+</form>
+​
+<form id="pricing">
+  <option value="one"></option>
+  <div class="form-group">
+        <label for="" >Quantity</label>
+        <br>
+        <input type="number" class="form-control" id="number" placeholder="" required  min="1"/>
+      </div>
+      <button type="button" class="btn btn-success btn-lg" style="margin-left: 40%;" id="checkout">Order</button>
+      
+    </form>
+    </div>
+​
+​
+​
+<br><br>
+<div class="container" id="contain">
+<div class="col-sm-7" id="orderPut">
+               
+  <div class="orderCalculation">
+    <h2>Medicine Order:</h2>
+    <div id="your-orders">
+      <table class="table table-sm  pizzaTable">
+        <thead>
+          <tr>
+            <th scope="col">Medicine</th>
+            <th scope="col">Type</th>
+            <th scope="col"></th>
+            <th scope="col">Delivery</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="ordersTaken">
+          
+        </tbody>
+      </table>
+    
+    <br /><br />
+      <button class="btn btn-success" id="Checkout" onclick="get-Med()">Checkout</button>
+      <div class="checkout-info hidden">
+        <h3 id="check">Check form</h3>
+        <form action="" id="checkoutForm">
+<div class="form-group">
+<input type="text" id="name" class="form-control mb-3" placeholder="Name">
+
+<div class="form-group">
+<label for="exampleFormControlSelect1">House Number</label>
+<input type="text" class="form-control" id="houseNumber" placeholder="Enter Your Name"
+    required />
+</div>
+​
+<button type="submit" class="btn btn-success" id="submit" >Submit</button>
+</form>
+​
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+​<br>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="./js/scripts.js"></script>
+</body>
+</html>
+
+<script>
+var OrderNew = [];
+function Pizza(pizzaFlavour,pizzaSize,pizzaCrust,pizzaTopping, PizzaNumber) {
+    this.pizzaFlavour=pizzaFlavour;
+    this.pizzaSize= pizzaSize;
+    this.pizzaCrust=pizzaCrust;
+    this.pizzaTopping=pizzaTopping;
+    this.PizzaNumber=PizzaNumber;
+}
+var pizzaPrice= [900,600,400,]
+Pizza.prototype.totalPrice = function(){
+    return (this.pizzaCrust + this.pizzaTopping + this.pizzaSize) * this.PizzaNumber
+};
+Pizza.prototype.pizzaS = function () {
+    if (this.pizzaSize == 900) {
+        return "Panadol"
+        
+    } else if (this.pizzaSize == 600) {
+        return "Strepsils"
+    } else if (this.pizzaSize == 400) {
+        return "Brufen"
+    }
+}
+Pizza.prototype.pizzaC = function () {
+    if (this.pizzaCrust == 150) {
+        return "Syrup"
+        
+    } else if (this.pizzaCrust == 200) {
+        return "Capsule"
+    } else if (this.pizzaCrust == 250) {
+        return "Injection"
+    }
+}
+Pizza.prototype.pizzaT =function(){
+    if (this.pizzaTopping == 150){
+        return "Main Branch Pickup"
+    }
+    else if (this.pizzaTopping == 170){
+        return " Sub Branch Pickup"
+    }
+    else if ( this.pizzaTopping == 200){
+        return"Home Delivery"
+    }
+}
+
+$("#checkout").click(function (event) {
+    
+    var PizzaFlavour = $("#Flavour").val();
+    
+    var PizzaSize = parseInt( $("#Size").val());
+    
+    var PizzaCrust = parseInt( $("#Crust").val());
+    
+    var PizzaTopping =parseInt( $("#Topping").val());
+    
+    var PizzaNumber =parseInt( $("#number").val());
+    
+    
+    var newPizzae = new Pizza(PizzaFlavour, PizzaSize, PizzaCrust, PizzaTopping, PizzaNumber); 
+    
+    
+    console.log(newPizzae)
+    
+    console.log(newPizzae.pizzaFlavour)
+    OrderNew.push(newPizzae);
+    console.log(OrderNew)
+    
+    $("#Flavour").val("");
+    $("#Size").val("");
+    $("#Crust").val("");
+    $("#Topping").val("");
+    $("#number").val("");
+     
+    totalAmount = 0
+    for (let i = 0; i < OrderNew.length; i++ ){
+        totalAmount += OrderNew[i].totalPrice();
+        console.log(totalAmount)
+    }
+    
+    $("#ordersTaken").append(
+        "<tr>" +
+        '<td scope="orderCalculation">' +
+       newPizzae.pizzaFlavour +
+        "</td>" +
+        "<td>" +
+        newPizzae.pizzaS () +
+        " @ " +
+        newPizzae.pizzaSize + 
+        "</td>" +
+        "<td>" +
+        newPizzae.pizzaC () +
+        " @ " +
+        newPizzae.pizzaCrust + 
+        "</td>" +
+        "<td>" +
+        newPizzae.pizzaT () +
+        " @ " +
+        newPizzae.pizzaTopping + 
+        "</td>" +
+        "<td>" +
+        newPizzae.PizzaNumber +
+        "</td>" +
+        "<td>" +
+        newPizzae.totalPrice() +
+        "</td>" +
+        "</tr>"
+
+    );
+    
+    $("#ordersTaken").append("");
+    if (OrderNew.length > 0) {
+        $("#form-heading").empty();
+        $("#form-heading").append("Make A New Order");
+    }
+    $("#totalAmount").fadeIn();
+    $("#Checkout").fadeIn();
+    $("#orderPut").fadeIn();
+    $("#totalAmount").empty();
+    $("#totalAmount").append(totalAmount);
+    $("#totalAmount").show();
+});
+$("#Checkout").click(function () {
+$(".checkout-info").show();
+});
+$("#checkoutForm").submit(function (event) {
+event.preventDefault();
+var name = $("#name").val();
+var deliveryOption = $("#OptionDelivery").val();
+NameOfCustomer = name;
+$("#name").val("");
+$("#OptionDelivery").val("");
+$(".checkout-info").hide();
+$("#Checkout").hide();
+$("#totalAmount").empty();
+if (deliveryOption === "deliver") {
+    $(".deliveryLocation").show();
+    $(".deliveryCost").show();
+    $("#totalAmount").empty();
+    $("#delivery-cost").append(150);
+    totalAmount += 150;
+    $("#totalAmount").empty();
+    $("#totalAmount").empty();
+$("#totalAmount").append(totalAmount);
+$(".TotalAmount").show();
+} else {
+    alert(+"Dear, "+ NameOfCustomer + ": Your total bill is Ksh. " + totalAmount + ".Collect your order in the next one hour." + " " + " Feel free to reach out to us anytime for questions peraining our products.");
+}
+});
+$("#locationForm").submit(function (event) {
+event.preventDefault();
+var estateEntered = $("#estate").val();
+var houseNumberEntered = $("#houseNumber").val();
+estate = estateEntered;
+houseNumber = houseNumberEntered;
+$("#Checkout").hide();
+$(".deliveryLocation").hide();
+$("#totalAmount").empty();
+$("#totalAmount").append(totalAmount);
+$(".TotalAmount").show();
+alert(+ "Dear " + NameOfCustomer + ": Your new total bill is Ksh. " + totalAmount + ". Your order will be delivered to " + estate + ", " + houseNumber + " in the next one hour." + " Make full payment on delivery." + "Feel free to reach out to us anytime for questions peraining our products and deliveries.");
+});
+</script>
+	
