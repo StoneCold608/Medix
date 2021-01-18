@@ -37,6 +37,7 @@
                            
 
          </select>
+	     <p id="result"></p>
                 <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
                   <option>Syrup</option>
                   <option>Capsule</option>
@@ -57,7 +58,7 @@
          </div>
                               
   
-  <p id="result"></p>
+ 
                              
 
     <label>Cellular</label>
@@ -130,7 +131,7 @@
 	   
          </div>
 	 </div>
-	 
+	
 	    <label>Respiratory System</label>
                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
 				                                 
@@ -447,7 +448,14 @@
 	 <script type="text/javascript">
 	 // business logic
 // business logic
+		 var optionValues = [];
 		 
+		 $('#med-selector option').each(function() 
+				       {
+			     optionValues.push($(this).val());
+});
+
+$('#result').html(optionValues);
 	
 
                  $( ".med-selector" ).val();
