@@ -4,22 +4,10 @@
   <head>
   
     <link href="bootstrap.css" rel="stylesheet" type="text/css">
-	
-  
-   
-    <script src="jquery-1.12.0.js"></script>
-   
-     <style>
-       
-           
-         
-
-      
-
-	
-
-
-    </style>
+	  <script src="jquery-1.12.0.js"></script>
+	   <style>
+		         
+           </style>
 
 
 <div class="container-administrator">
@@ -38,7 +26,7 @@
     
      <label>Integumentary</label>
     
-         <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
+         <select style="max-width:20%;" class="med" id="size-selector" required>
                                                          
          	<option value=2800 >Dicloxacilin</option>
                 <option>Erythromycin</option>
@@ -144,13 +132,12 @@
 	 
 	    <label>Respiratory System</label>
                              <select style="max-width:20%;" class="form-control drop" id="size-selector" required>
-                             
-                             
-    <option>Abacavir</option>
-      <option>Abacavir / dolutegravir / lamivudine (Triumeq®)</option>
-     <option> Abacavir / lamivudine (Epzicom®)</option>
-      <option>Acyclovir</option>
-     <option> Alemtuzumab</option>
+				                                 
+                             <option>Abacavir</option>
+		             <option>Abacavir / dolutegravir / lamivudine (Triumeq®)</option>
+			     <option> Abacavir / lamivudine (Epzicom®)</option>
+		             <option>Acyclovir</option>
+		             <option> Alemtuzumab</option>
      <option> Alendronate</option>
       <option>Allopurinol</option>
       <option>Amifostine</option>
@@ -459,7 +446,11 @@
 	 <script type="text/javascript">
 	 // business logic
 // business logic
+var medicine = $('#med').val();
+alert('value is ' + ( 10 + medicine )); 
+// it give result as 10x instead of 1x 
 
+$('#lesson_per_class option:selected').index()
 
 		 
 class Medicine {
