@@ -28,11 +28,11 @@
     
          <select style="max-width:20%;" class="form-control drop" id="med-selector" required>
                                                          
-         	<option value=2800 >Dicloxacilin :  Ksh.2800</option>
-                <option value=2368>Erythromycin  :  Ksh.2368</option>
-                <option value=279>Tetracycline   :  Ksh279</option>
-                <option value=890>Fluconazole    :  Ksh.890</option>
-                <option value=8900>Itraconazole   :  Ksh.8900 </option>
+         	<option value=2800 id="dicloxacilin">Dicloxacilin :  Ksh.2800</option>
+                <option value=2368 id="erthromycin">Erythromycin  :  Ksh.2368</option>
+                <option value=279  id="tetracycline">Tetracycline :  Ksh279</option>
+                <option value=890  id="fluconazole">Fluconazole   :  Ksh.890</option>
+                <option value=8900 id="itraconazole">Itraconazole :  Ksh.8900 </option>
                 
                            
 
@@ -47,13 +47,13 @@
         
            <select  style="max-width:20%;" class="form-control drop" id="topping-selector" required>
                                 
-                                <option>Pickup Station:No Charge</option>
-                                <option class="home-delivery" value="100">Home Delivery:Ksh100</option>
-</select>                              
+                                <option class="pickup-station" id ="integumentary-pick-up">Pickup Station:No Charge</option>
+                                <option class="home-delivery"  id="integumentary-home-delivery"value="100">Home Delivery:Ksh100</option>
+          </select>                              
 
                            
                               
-                                   <div class="quantity" id="numberInput">
+                                   <div class="quantity" value=3 id="integumentary-quantity">
                  <input  style="max-width:20%;"type="number" class="form-control" placeholder=" 1" id="medicine-quantity" min="1" required>
          </div>
                               
@@ -451,9 +451,26 @@
 	
 	var optionValues = [];
         var sum = 0;
-	 
+        var multiply = 0 ;
+		 
+		 
+		 
+      
+		
+
+	
+	
+	$('#dicloxacilin'(function()
+	{
+		multiply *= Number($(this).val());
+		optionValues.push($(this).val());
+	});
+	
+		$('#result').html(sum);
+		$( ".med-selector" ).val();
 	$('#med-selector option').each(function()
 	{
+		
 		sum += Number($(this).val());		
 		optionValues.push($(this).val());
 	});
