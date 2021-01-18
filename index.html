@@ -428,7 +428,9 @@
 	var result = document.getElementById("result-integumentary")
 	
         var addcartbtn  = document.getElementById("add-cart")
-        addcartbtn.addEventListener("click",function(){ var med = [{name:dicloxacilin
+        addcartbtn.addEventListener("click",function()
+				    { 
+		var med = [{name:dicloxacilin
 			         price:2800
 			         type: capsule
 			    	 delivery:home},
@@ -438,6 +440,7 @@
 				   type:syrup
 				   delivery:home
 			   }]
+		};
 		 
 		 render-output(med);});
 		 
