@@ -45,8 +45,9 @@ Med.prototype.medD =function(){
     }
 }
 
-$("#checkout").click(function (event) {
-    
+$("#checkout").click(function (event) 
+                     {
+        
     var MedName = $("#Name").val();
     
     var MedPrice = parseInt( $("#Price").val());
@@ -68,7 +69,7 @@ $("#checkout").click(function (event) {
     console.log(OrderNew)
     
     $("#Name").val("");
-    $("#Price").val("");
+    $("#Type").val("");
     $("#Strength").val("");
     $("#Delivery").val("");
     $("#Quantity").val("");
@@ -80,21 +81,9 @@ $("#checkout").click(function (event) {
         console.log(totalAmount)
     }
     
-    $("#ordersTaken").append(
-        "<tr>" +
-        '<td scope="orderCalculation">' +
-       newMed.medName +
-        "</td>" +
-        "<td>" +
-        newMed.medP () +
-        " @ " +
-        newMed.medPrice + 
-        "</td>" +
-        "<td>" +
-        newMed.medS () +
-        " @ " +
-        newMed.medStrength + 
-        "</td>" +
+    $("#ordersTaken").append("<tr>" + '<td scope="orderCalculation">' +  newMed.medName + "</td>" + "<td>" + 
+                             newMed.medP () +  " @ " + newMed.medPrice + 
+             "</td>" +  "<td>" +  newMed.medS () +  " @ " +  newMed.medStrength +    "</td>" +
         "<td>" +
         newMed.medD() +
         " @ " +
