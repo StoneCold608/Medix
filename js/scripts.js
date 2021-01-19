@@ -1,23 +1,26 @@
 var OrderNew = [];
-function Med(medName,medType,medStrength,medDelivery, MedQuantity) {
+function Med(medName,medPrice,medStrength,medDelivery, MedQuantity) 
+{
     this.medName=medName;
-    this.medType= medType;
+    this.medPrice= medPrice;
     this.medStrength=medStrength;
     this.medDelivery=medDelivery;
     this.MedQuantity=MedQuantity;
 }
 var medPrice= [900,600,400,]
 Med.prototype.totalPrice = function(){
-    return (this.medStrength + this.medDelivery + this.medType) * this.MedQuantity
+    return (this.medStrength + this.medDelivery + this.medPrice) * this.MedQuantity
 };
-Med.prototype.medT = function () {
-    if (this.medType == 900) {
-        return "Panadol"
+Med.prototype.medP = function () {
+    if (this.medPrice == 900) {
+        return "Ksh.900"
         
-    } else if (this.medType == 600) {
-        return "Strepsils"
-    } else if (this.medType == 400) {
-        return "Brufen"
+    } else if (this.medPrice == 600)
+    {
+        return "Ksh.600"
+    } else if (this.medPrice == 400)
+    {
+        return "Ksh.400"
     }
 }
 Med.prototype.medS = function () {
@@ -83,9 +86,9 @@ $("#checkout").click(function (event) {
        newMed.medName +
         "</td>" +
         "<td>" +
-        newMed.medT () +
+        newMed.medP () +
         " @ " +
-        newMed.medType + 
+        newMed.medPrice + 
         "</td>" +
         "<td>" +
         newMed.medS () +
