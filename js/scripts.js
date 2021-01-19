@@ -12,7 +12,7 @@ var medPrice= [900,600,400,]
 Med.prototype.totalPrice = function(){
     return (this.medStrength + this.medDelivery +  (this.medPrice * this.MedQuantity))
 };
-Med.prototype.medP = function () {
+Med.prototype.medP = function() {
     if (this.medPrice == 900) {
         return "Ksh.900"
         
@@ -24,7 +24,7 @@ Med.prototype.medP = function () {
         return "Ksh.400"
     }
 }
-Med.prototype.medS = function () {
+Med.prototype.medS = function() {
     if (this.medStrength == 150) {
         return "Mild"
         
@@ -46,7 +46,7 @@ Med.prototype.medD =function(){
     }
 }
 
-$("#checkout").click(function (event) 
+$("#checkout").click(function(event) 
                      {
         
     var MedName = $("#Name").val();
@@ -84,8 +84,8 @@ $("#checkout").click(function (event)
     
     $("#ordersTaken").append("<tr>" + '<td scope="orderCalculation">' +  
                              newMed.medName + "</td>" + 
-                             "<td>" +  newMed.medP () +  " /Ksh " +  newMed.medPrice + "</td>" +  
-                             "<td>" +  newMed.medS () +  " /Ksh " +  newMed.medStrength + "</td>" +
+                             "<td>" +  newMed.medP() +  " /Ksh " +  newMed.medPrice + "</td>" +  
+                             "<td>" +  newMed.medS() +  " /Ksh " +  newMed.medStrength + "</td>" +
                              "<td>" +  newMed.medD() +   " /Ksh " +  newMed.medDelivery + "</td>" +
                              "<td>" +  newMed.MedQuantity + "</td>" +
                              "<td>" +  newMed.totalPrice() +"</td>" +
