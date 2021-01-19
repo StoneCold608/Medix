@@ -70,9 +70,9 @@
   <p>Dose</p> 
   <select class="form-control form-control-sm" id="Strength">
     <option>select</option>
-    <option value="0">Mild</option>
-    <option value="0">Normal</option>
-    <option value="0">Effective</option>
+    <option value="5">Mild</option>
+    <option value="10">Normal</option>
+    <option value="15">Effective</option>
   </select>
   
 <p>Pick Method</p>
@@ -106,12 +106,12 @@
   <div class="orderCalculation">
     <h2>Medicine Order:</h2>
     <div id="your-orders">
-      <table class="table table-sm  pizzaTable">
+      <table class="table table-sm  medTable">
         <thead>
           <tr>
             <th scope="col">Medicine</th>
             <th scope="col">Type</th>
-            <th scope="col"></th>
+            <th scope="col">Strength</th>
             <th scope="col">Delivery</th>
             <th scope="col">Quantity</th>
             <th scope="col">Total</th>
@@ -121,6 +121,14 @@
           
         </tbody>
       </table>
+	    
+    <p class="deliveryCost hidden">
+        Delivery Cost: Ksh. <span id="delivery-cost"></span>
+    </p>
+	    
+    <p class="TotalAmount hidden">
+        Total Amount: Ksh. <span id="totalAmount"></span>
+    </p>
     
     <br /><br />
       <button class="btn btn-success" id="Checkout" onclick="get-Med()">Checkout</button>
@@ -129,7 +137,23 @@
         <form action="" id="checkoutForm">
 <div class="form-group">
 <input type="text" id="name" class="form-control mb-3" placeholder="Name">
-
+<label for="delivery">Desired Delivery Option</label>
+<select class="form-control" id="OptionDelivery" required>
+<option value="deliver">Home Delivery?</option>
+<option value="collect">Pick Up</option>
+</select>
+</div>
+<button type="submit" class="btn btn-success" id="final-option">Deliver</button>
+</form>
+</div>
+<div class="deliveryLocation hidden">
+<form id="locationForm">
+<h3>Enter your location</h3>
+<div class="form-group">
+<label>Estate</label>
+<input type="text" class="form-control" id="estate" placeholder="Enter Your Name"
+    required />
+</div>
 <div class="form-group">
 <label for="exampleFormControlSelect1">House Number</label>
 <input type="text" class="form-control" id="houseNumber" placeholder="Enter Name"
@@ -149,7 +173,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" 
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="./js/scripts.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
 
