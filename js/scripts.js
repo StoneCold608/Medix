@@ -1,5 +1,5 @@
 var OrderNew = [];
-function Med(medName,medPrice,medStrength,medDelivery, MedQuantity) 
+function Med(medName,medPrice,medStrength,medDelivery, medQuantity) 
 {
     this.medName=medName;
     this.medPrice= medPrice;
@@ -56,7 +56,7 @@ $("#checkout").click(function (event)
     
     var MedDelivery =parseInt( $("#Delivery").val());
     
-    var MedQuantity =parseInt( $("#Quantity").val());
+    var MedQuantity =parseInt( $("#number").val());
     
     
     var newMed = new Med(MedName, MedPrice, MedStrength , MedDelivery, MedQuantity); 
