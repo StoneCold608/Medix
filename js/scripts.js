@@ -1,6 +1,9 @@
 var OrderNew = [];
+
+function Medicince()
 	
-function Med(medName,medType,medStrength,medDelivery, medQuantity) {
+function Med(medName,medType,medStrength,medDelivery, medQuantity) 
+{
     this.medName=medName;
     this.medType= medType;
     this.medStrength=medStrength;
@@ -9,9 +12,9 @@ function Med(medName,medType,medStrength,medDelivery, medQuantity) {
 }
 var medPrice= [900,600,400,]
 Med.prototype.totalPrice = function(){
-    return (this. medStrength+ this.medDelivery + this.) * this.medQuantity
+    return (this.medStrength+ this.medDelivery + this.medType) * this.medQuantity
 };
-Med.prototype.medN = function () {
+Med.prototype.medT = function () {
     if (this.medType == 900) {
         return "Panadol"
         
