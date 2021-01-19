@@ -1,6 +1,6 @@
 
 var OrderNew = [];
-function Med(medName,medPrice,medStrength,medDelivery, medQuantity) 
+function Med(medName,medPrice,medStrength,medDelivery, MedQuantity) 
 {
     this.medName=medName;
     this.medPrice= medPrice;
