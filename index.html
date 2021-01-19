@@ -119,7 +119,7 @@
 
 <div class="form-group">
 <label for="exampleFormControlSelect1">House Number</label>
-<input type="text" class="form-control" id="houseNumber" placeholder="Enter Your Name"
+<input type="text" class="form-control" id="houseNumber" placeholder="Enter Name"
     required />
 </div>
 
@@ -142,9 +142,9 @@
 
 <script>
 var OrderNew = [];
-function Med(medName,pizzaSize,pizzaCrust,pizzaTopping, PizzaNumber) {
+function Med(medName,medType,pizzaCrust,pizzaTopping, PizzaNumber) {
     this.medName=medName;
-    this.pizzaSize= pizzaSize;
+    this.medType= medType;
     this.pizzaCrust=pizzaCrust;
     this.pizzaTopping=pizzaTopping;
     this.PizzaNumber=PizzaNumber;
@@ -154,10 +154,10 @@ Med.prototype.totalPrice = function(){
     return (this.pizzaCrust + this.pizzaTopping + this.pizzaSize) * this.PizzaNumber
 };
 Med.prototype.pizzaS = function () {
-    if (this.pizzaSize == 900) {
+    if (this.medType == 900) {
         return "Panadol"
         
-    } else if (this.pizzaSize == 600) {
+    } else if (this.medType == 600) {
         return "Strepsils"
     } else if (this.pizzaSize == 400) {
         return "Brufen"
@@ -189,7 +189,7 @@ $("#checkout").click(function (event) {
     
     var PizzaFlavour = $("#Flavour").val();
     
-    var PizzaSize = parseInt( $("#Size").val());
+    var MedType = parseInt( $("#Type").val());
     
     var PizzaCrust = parseInt( $("#Crust").val());
     
@@ -198,7 +198,7 @@ $("#checkout").click(function (event) {
     var PizzaNumber =parseInt( $("#number").val());
     
     
-    var newPizzae = new Med(PizzaFlavour, PizzaSize, PizzaCrust, PizzaTopping, PizzaNumber); 
+    var newPizzae = new Med(PizzaFlavour, MedType, PizzaCrust, PizzaTopping, PizzaNumber); 
     
     
     console.log(newPizzae)
@@ -208,7 +208,7 @@ $("#checkout").click(function (event) {
     console.log(OrderNew)
     
     $("#Flavour").val("");
-    $("#Size").val("");
+    $("#Type").val("");
     $("#Crust").val("");
     $("#Topping").val("");
     $("#number").val("");
@@ -227,7 +227,7 @@ $("#checkout").click(function (event) {
         "<td>" +
         newPizzae.pizzaS () +
         " @ " +
-        newPizzae.pizzaSize + 
+        newPizzae.medType + 
         "</td>" +
         "<td>" +
         newPizzae.pizzaC () +
