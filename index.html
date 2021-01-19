@@ -38,7 +38,7 @@
     <h2 style="text-align: center;color: black;"><strong> Buy Now</strong></h2>
 <div class="card" style="color: white;">
     <p>Medicine</p>
-    <select class="form-control form-control-sm" id="Flavour">
+    <select class="form-control form-control-sm" id="Name">
       <br>
       <option>select</option>
       <option value="Panadol">Panadol</option>
@@ -46,7 +46,7 @@
       <option value="Brufen">Brufen</option>
     </select>
     <p>Medicine Type</p>
-    <select class="form-control form-control-sm" id="Size">
+    <select class="form-control form-control-sm" id="Type">
       <br>
       <option>select</option>
       <option value="900">Syrup </option>
@@ -55,7 +55,7 @@
     </select>
     
   <p>Dose</p> 
-  <select class="form-control form-control-sm" id="Crust">
+  <select class="form-control form-control-sm" id="Strength">
     <option>select</option>
     <option value="0">Mild</option>
     <option value="0">Normal</option>
@@ -63,7 +63,7 @@
   </select>
   
 <p>Pick Method</p>
-  <select class="form-control form-control-sm" id="Topping">
+  <select class="form-control form-control-sm" id="Delivery">
     <option>select</option>
     <option value="0">Main Branch Pickup : Free           </option>
     <option value="5">Sub-Branch Pickup  : Ksh.1 per item </option>
@@ -188,15 +188,15 @@ Med.prototype.medD =function(){
 
 $("#checkout").click(function (event) {
     
-    var MedName = $("#Flavour").val();
+    var MedName = $("#Name").val();
     
     var MedType = parseInt( $("#Type").val());
     
-    var MedStrength = parseInt( $("#Crust").val());
+    var MedStrength = parseInt( $("#Strength").val());
     
-    var MedDelivery =parseInt( $("#Topping").val());
+    var MedDelivery =parseInt( $("#Delivery").val());
     
-    var MedQuantity =parseInt( $("#number").val());
+    var MedQuantity =parseInt( $("#Quantity").val());
     
     
     var newMed = new Med(MedName, MedType, MedStrength , MedDelivery, MedQuantity); 
@@ -208,11 +208,11 @@ $("#checkout").click(function (event) {
     OrderNew.push(newMed);
     console.log(OrderNew)
     
-    $("#Flavour").val("");
+    $("#Name").val("");
     $("#Type").val("");
-    $("#Crust").val("");
-    $("#Topping").val("");
-    $("#number").val("");
+    $("#Strength").val("");
+    $("#Delivery").val("");
+    $("#Quantity").val("");
      
     totalAmount = 0
     for (let i = 0; i < OrderNew.length; i++ )
@@ -227,22 +227,22 @@ $("#checkout").click(function (event) {
        newMed.medName +
         "</td>" +
         "<td>" +
-        newMed.pizzaS () +
+        newMed.medT () +
         " @ " +
         newMed.medType + 
         "</td>" +
         "<td>" +
-        newMed.pizzaC () +
+        newMed.medS () +
         " @ " +
-        newMed.pizzaCrust + 
+        newMed.medStrength + 
         "</td>" +
         "<td>" +
-        newMed.pizzaT () +
+        newMed.medD() +
         " @ " +
-        newMed.pizzaTopping + 
+        newMed.medDelivery + 
         "</td>" +
         "<td>" +
-        newMed.PizzaNumber +
+        newMed.MedQuantity +
         "</td>" +
         "<td>" +
         newMed.totalPrice() +
