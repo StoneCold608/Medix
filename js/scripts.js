@@ -1,4 +1,3 @@
-<script>
 var OrderNew = [];
 	
 function Med(medName,medType,medStrength,medDelivery, medQuantity) {
@@ -161,5 +160,5 @@ $("#totalAmount").append(totalAmount);
 $(".TotalAmount").show();
 alert(+ "Dear " + NameOfCustomer + ": Your new total bill is Ksh. " + totalAmount + ". Your order will be delivered to " + estate + ", " + houseNumber + " in the next one hour." + " Make full payment on delivery." + "Feel free to reach out to us anytime for questions peraining our products and deliveries.");
 });
-</script>
+
  
