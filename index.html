@@ -142,69 +142,70 @@
 
 <script>
 var OrderNew = [];
-function Med(medName,medType,pizzaCrust,pizzaTopping, PizzaNumber) {
+	
+function Med(medName,medType,medStrength,medDelivery, medQuantity) {
     this.medName=medName;
     this.medType= medType;
-    this.pizzaCrust=pizzaCrust;
-    this.pizzaTopping=pizzaTopping;
-    this.PizzaNumber=PizzaNumber;
+    this.medStrength=medStrength;
+    this.medDelivery=medDelivery;
+    this.medQuantity=medQuantity;
 }
-var pizzaPrice= [900,600,400,]
+var medPrice= [900,600,400,]
 Med.prototype.totalPrice = function(){
-    return (this.pizzaCrust + this.pizzaTopping + this.pizzaSize) * this.PizzaNumber
+    return (this. medStrength+ this.medDelivery + this.) * this.medQuantity
 };
-Med.prototype.pizzaS = function () {
+Med.prototype.medN = function () {
     if (this.medType == 900) {
         return "Panadol"
         
     } else if (this.medType == 600) {
         return "Strepsils"
-    } else if (this.pizzaSize == 400) {
+    } else if (this.medType == 400) {
         return "Brufen"
     }
 }
-Med.prototype.pizzaC = function () {
-    if (this.pizzaCrust == 150) {
+Med.prototype.medS = function () {
+    if (this.medStrength == 150) {
         return "Syrup"
         
-    } else if (this.pizzaCrust == 200) {
+    } else if (this.medStrength == 200) {
         return "Capsule"
-    } else if (this.pizzaCrust == 250) {
+    } else if (this.medStrength == 250) {
         return "Injection"
     }
 }
-Med.prototype.pizzaT =function(){
-    if (this.pizzaTopping == 150){
+Med.prototype.medD =function(){
+    if (this.medDelivery == 150){
         return "Main Branch Pickup"
     }
-    else if (this.pizzaTopping == 170){
+    else if (this.medDelivery == 170){
         return " Sub Branch Pickup"
     }
-    else if ( this.pizzaTopping == 200){
+    else if ( this.medDelivery == 200){
         return"Home Delivery"
     }
 }
 
 $("#checkout").click(function (event) {
     
-    var PizzaFlavour = $("#Flavour").val();
+    var MedName = $("#Flavour").val();
     
     var MedType = parseInt( $("#Type").val());
     
-    var PizzaCrust = parseInt( $("#Crust").val());
+    var MedStrength = parseInt( $("#Crust").val());
     
-    var PizzaTopping =parseInt( $("#Topping").val());
+    var MedDelivery =parseInt( $("#Topping").val());
     
-    var PizzaNumber =parseInt( $("#number").val());
-    
-    
-    var newPizzae = new Med(PizzaFlavour, MedType, PizzaCrust, PizzaTopping, PizzaNumber); 
+    var MedQuantity =parseInt( $("#number").val());
     
     
-    console.log(newPizzae)
+    var newMed = new Med(MedName, MedType, MedStrength , MedDelivery, MedQuantity); 
     
-    console.log(newPizzae.medName)
-    OrderNew.push(newPizzae);
+    
+    console.log(newMed)
+    
+    console.log(newMed.medName)
+    OrderNew.push(newMed);
     console.log(OrderNew)
     
     $("#Flavour").val("");
@@ -214,7 +215,8 @@ $("#checkout").click(function (event) {
     $("#number").val("");
      
     totalAmount = 0
-    for (let i = 0; i < OrderNew.length; i++ ){
+    for (let i = 0; i < OrderNew.length; i++ )
+    {
         totalAmount += OrderNew[i].totalPrice();
         console.log(totalAmount)
     }
@@ -222,28 +224,28 @@ $("#checkout").click(function (event) {
     $("#ordersTaken").append(
         "<tr>" +
         '<td scope="orderCalculation">' +
-       newPizzae.medName +
+       newMed.medName +
         "</td>" +
         "<td>" +
-        newPizzae.pizzaS () +
+        newMed.pizzaS () +
         " @ " +
-        newPizzae.medType + 
+        newMed.medType + 
         "</td>" +
         "<td>" +
-        newPizzae.pizzaC () +
+        newMed.pizzaC () +
         " @ " +
-        newPizzae.pizzaCrust + 
+        newMed.pizzaCrust + 
         "</td>" +
         "<td>" +
-        newPizzae.pizzaT () +
+        newMed.pizzaT () +
         " @ " +
-        newPizzae.pizzaTopping + 
+        newMed.pizzaTopping + 
         "</td>" +
         "<td>" +
-        newPizzae.PizzaNumber +
+        newMed.PizzaNumber +
         "</td>" +
         "<td>" +
-        newPizzae.totalPrice() +
+        newMed.totalPrice() +
         "</td>" +
         "</tr>"
 
