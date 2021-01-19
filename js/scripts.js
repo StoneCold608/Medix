@@ -49,7 +49,7 @@ $("#checkout").click(function (event) {
     
     var MedName = $("#Name").val();
     
-    var MedType = parseInt( $("#Type").val());
+    var MedPrice = parseInt( $("#Price").val());
     
     var MedStrength = parseInt( $("#Strength").val());
     
@@ -58,7 +58,7 @@ $("#checkout").click(function (event) {
     var MedQuantity =parseInt( $("#Quantity").val());
     
     
-    var newMed = new Med(MedName, MedType, MedStrength , MedDelivery, MedQuantity); 
+    var newMed = new Med(MedName, MedPrice, MedStrength , MedDelivery, MedQuantity); 
     
     
     console.log(newMed)
@@ -68,7 +68,7 @@ $("#checkout").click(function (event) {
     console.log(OrderNew)
     
     $("#Name").val("");
-    $("#Type").val("");
+    $("#Price").val("");
     $("#Strength").val("");
     $("#Delivery").val("");
     $("#Quantity").val("");
