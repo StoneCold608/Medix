@@ -8,7 +8,7 @@ function Med(medName,medType,medStrength,medDelivery, MedQuantity) {
 }
 var medPrice= [900,600,400,]
 Med.prototype.totalPrice = function(){
-    return (this.medStrength + this.medDelivery + this.medType) * this.medQuantity
+    return (this.medStrength + this.medDelivery + this.medType) * this.MedQuantity
 };
 Med.prototype.medT = function () {
     if (this.medType == 900) {
