@@ -1,11 +1,11 @@
 var OrderNew = [];
-function Med(medName,medPrice,medStrength,medDelivery, MedQuantity) 
+function Med(medName,medPrice,medStrength,medDelivery, medQuantity) 
 {
     this.medName=medName;
     this.medPrice= medPrice;
     this.medStrength=medStrength;
     this.medDelivery=medDelivery;
-    this.MedQuantity=MedQuantity;
+    this.medQuantity=medQuantity;
 }
 var medPrice= [900,600,400,]
 Med.prototype.totalPrice = function(){
