@@ -9,7 +9,7 @@ function Med(medName,medPrice,medStrength,medDelivery, MedQuantity)
 }
 var medPrice= [900,600,400,]
 Med.prototype.totalPrice = function(){
-    return (this.medStrength + this.medDelivery + this.medPrice) * this.MedQuantity
+    return (this.medStrength + this.medDelivery +  (this.medPrice * this.MedQuantity))
 };
 Med.prototype.medP = function () {
     if (this.medPrice == 900) {
@@ -25,12 +25,12 @@ Med.prototype.medP = function () {
 }
 Med.prototype.medS = function () {
     if (this.medStrength == 150) {
-        return "Syrup"
+        return "Mild"
         
     } else if (this.medStrength == 200) {
-        return "Capsule"
+        return "Normal"
     } else if (this.medStrength == 250) {
-        return "Injection"
+        return "Effective"
     }
 }
 Med.prototype.medD =function(){
