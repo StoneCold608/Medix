@@ -181,6 +181,42 @@
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="js/scripts.js"></script>
+
+        <script>
+            function random_function()
+            {
+                var a=document.getElementById("input").value;
+                if(a==="Panadol")
+                {
+                    var arr=["Panadol@50"];
+                }
+                else if(a==="Strepsils")
+                {
+                    var arr=["Strepsils@60"];
+                }
+             
+                var string="";
+             
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                document.getElementById("output").innerHTML=string;
+            }
+        </script>
+    
+    
+        <select id="input" onchange="random_function()">
+            <option>select option</option>
+            <option>Panadol</option>
+            <option>Strepsils</option>
+        </select>
+        <div>
+           <select id="output" onchange="random_function1()">
+        </div>
+
+
+
 </body>
 </html>
 
