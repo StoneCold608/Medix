@@ -84,11 +84,11 @@ $("#checkout").click(function(event)
     
     $("#ordersTaken").append("<tr>" + '<td scope="orderCalculation">' +  
                              newMed.medName + "</td>" + 
-                             "<td>" +  /*newMed.medP()*/ +  " Ksh " +  newMed.medPrice + "</td>" +  
-                             "<td>" +  /*newMed.medS()*/+  " Ksh " +  newMed.medStrength + "</td>" +
-                             "<td>" +  /*newMed.medD()*/ +   " Ksh " +  newMed.medDelivery + "</td>" +
-                             "<td>" +  /*newMed.MedQuantity*/ + "</td>" +
-                             "<td>" +  /*newMed.totalPrice()*/ +"</td>" +
+                             "<td>" +  newMed.medP() +  " Ksh " +  newMed.medPrice + "</td>" +  
+                             "<td>" +  newMed.medS()+  " Ksh " +  newMed.medStrength + "</td>" +
+                             "<td>" +  newMed.medD() +   " Ksh " +  newMed.medDelivery + "</td>" +
+                             "<td>" +  newMed.MedQuantity + "</td>" +
+                             "<td>" +  newMed.totalPrice() +"</td>" +
                              "</tr>"
 
     );
