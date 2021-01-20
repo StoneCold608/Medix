@@ -145,6 +145,27 @@ $("#totalAmount").append(totalAmount);
 $(".TotalAmount").show();
 alert(+ "Dear " + NameOfCustomer + ": Your new total bill is Ksh. " + totalAmount + ". Your order will be delivered to " + estate + ", " + houseNumber + " in the next one hour." + " Make full payment on delivery." + "Feel free to reach out to us anytime for questions peraining our products and deliveries.");
 });
-
+ 
+ function random_function()
+            {
+                var a=document.getElementById("Name").value;
+                if(a==="Panadol")
+                {
+                    var arr=["Panadol@50"];
+                }
+                else if(a==="Strepsils")
+                {
+                    var arr=["Strepsils@60"];
+                }
+             
+                var string="";
+             
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                document.getElementById("Price").innerHTML=string;
+            }
+        
  
  
