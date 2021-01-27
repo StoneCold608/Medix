@@ -51,3 +51,7 @@ li a:hover
   background-color: #555;
   color: white;
 }
+	{
+  background-image: url("medical.png");
+  background-repeat: repeat;
+}
