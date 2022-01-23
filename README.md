@@ -5,7 +5,5 @@ Author(s) information. - Eugene is an IT software developer,Network Engineer and
 Setup instructions - Github pages site
 Technologies used. - HTML,CSS and Javascript
 Contact information - eugenengaira863@gmail.com
-License and Copyright information - GNU License
-
-NOTE:ADDITIONAL VERSIONS AND COMMITS WILL BE IMPLEMENTED.THIS IS NOT THE FINAL PRODUCT.
+License and Copyright information - EULA License
 
